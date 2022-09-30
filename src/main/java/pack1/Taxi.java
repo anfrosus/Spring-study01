@@ -1,3 +1,5 @@
+package pack1;
+
 public class Taxi extends Transport implements Pay{
     String destination;
     int distToDestination;
@@ -26,16 +28,16 @@ public class Taxi extends Transport implements Pay{
 
 
     @Override
-    void end() {
+    public void end() {
         super.end();
         status = stat[2];
     }
 
     @Override
-    void board(int numOfPassengers) {
+    public void board(int numOfPassengers) {
     }
 
-    void board(int numOfPassengers, String destination, int distToDestination) {
+    public void board(int numOfPassengers, String destination, int distToDestination) {
         if (status == stat[0] && numOfPassengers <= maxPassenger){
             this.passengerNow += numOfPassengers;
             this.destination = destination;
@@ -57,7 +59,7 @@ public class Taxi extends Transport implements Pay{
     }
 
     @Override
-    void printStatus() {
+    public void printStatus() {
         super.printStatus();
         System.out.println("탑승 가능 여부 : " + status);
         System.out.println("기본 요금 : " + basicFare);

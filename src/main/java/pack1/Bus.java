@@ -1,5 +1,7 @@
+package pack1;
+
 public class Bus extends Transport{
-    final int BUS_FARE = 1000;
+    public final int BUS_FARE = 1000;
 
 
 
@@ -10,13 +12,13 @@ public class Bus extends Transport{
     }
 
     @Override
-    void end() {
+    public void end() {
         super.end();
         totalFare = 0;
     }
 
     @Override
-    void board(int numOfPassengers) {
+    public void board(int numOfPassengers) {
         seatsNow = maxPassenger - passengerNow;
         if (runEnd && seatsNow >= numOfPassengers){
             totalFare += BUS_FARE * numOfPassengers;
@@ -28,7 +30,7 @@ public class Bus extends Transport{
     }
 
     @Override
-    void printStatus() {
+    public void printStatus() {
         super.printStatus();
         System.out.println("승객 현황 : " + passengerNow + " / " + maxPassenger);
         System.out.println("요금 확인 : " + totalFare);
