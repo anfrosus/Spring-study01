@@ -49,6 +49,7 @@ public abstract class Transport {
 
     public abstract void board(int numOfPassengers);
 
+
     public void printStatus() {
         System.out.println("=== " + type + num + " 운행 여부 : " + (runEnd ? "운행중" : "차고지행") + " ===");
         System.out.println("연료 : " + fuel);

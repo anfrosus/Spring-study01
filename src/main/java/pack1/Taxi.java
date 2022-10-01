@@ -1,6 +1,6 @@
 package pack1;
 
-public class Taxi extends Transport implements Pay{
+public class Taxi extends Transport implements Pay {
     String destination;
     int distToDestination;
     int basicDist = 1;
